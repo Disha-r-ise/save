@@ -17,3 +17,9 @@ steps:
    - name: Build using Maven       
      run: mvn clean install       
      working-directory: demo
+
+
+FROM python:3.10
+WORKDIR /app
+COPY . .
+CMD ["python", "app.py"]
